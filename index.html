@@ -55,6 +55,33 @@ main{max-width:1060px;margin:0 auto;padding:16px 14px 54px}
 @media(max-width:740px){h1{font-size:35px}.grid{grid-template-columns:1fr}.meta{grid-template-columns:repeat(2,minmax(0,1fr))}.card{border-radius:20px;padding:16px}.nav a,.nav button{font-size:13px;padding:8px 10px}}
 @media(prefers-color-scheme:dark){:root{--bg:#111113;--card:#1c1c1e;--ink:#f5f5f7;--muted:#b0b0b5;--line:#333336;--nav:#111113dd;--soft:#2c2c2e;--shadow:0 8px 26px rgba(0,0,0,.25)}.hero{background:radial-gradient(circle at 10% 0%,#2c261e 0%,#1f1d19 38%,#111113 76%)}.nav a,.nav button{background:#1c1c1e}.note{background:#2f2a16;border-color:#665b2b}.summary-table th{background:#333}}
 @media print{.nav,.btns,.no-print{display:none!important}body{background:#fff;color:#000}.hero{background:#fff;padding:0 0 8px}main{max-width:none;padding:0}.card{box-shadow:none;border:1px solid #aaa;border-radius:8px;break-inside:avoid}h1{font-size:24pt}.subtitle,p,li{font-size:11pt}.page{display:none!important}.page.printing{display:block!important}}
+
+.essentials{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  margin:12px 0 0;
+}
+.essential-item{
+  background:var(--soft);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:13px;
+}
+.essential-item b{
+  display:block;
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:var(--muted);
+  margin-bottom:4px;
+}
+.essential-item span{
+  font-size:16px;
+  font-weight:800;
+}
+@media(max-width:740px){.essentials{grid-template-columns:1fr}}
+
 </style>
 </head>
 <body>
@@ -80,7 +107,7 @@ main{max-width:1060px;margin:0 auto;padding:16px 14px 54px}
 </header>
 <main>
   <section class="card">
-    <span class="pill">Production Edition v2.0</span>
+    <span class="pill">Production Edition v2.1</span>
     <h2>What should we do today?</h2>
     <p>This companion now focuses on daily sightseeing, cafés, restaurants, walking routes and Apple Maps navigation. TripIt remains your source of truth for flights, hotels, trains, cruise bookings and confirmations.</p>
     <div class="btns">
@@ -90,7 +117,7 @@ main{max-width:1060px;margin:0 auto;padding:16px 14px 54px}
     </div>
   </section>
   <section class="grid"><a class="card dest-card" href="#prague" onclick="showPage('prague')">
-      <span class="emoji">🇨🇿</span><span class="label">Days 1–4 · Complete in v2.0</span><h2>Prague</h2>
+      <span class="emoji">🇨🇿</span><span class="label">Days 1–4 · Complete in v2.1</span><h2>Prague</h2>
       <p>Open completed Prague guide.</p>
     </a><a class="card dest-card" href="#vienna" onclick="showPage('vienna')">
       <span class="emoji">🇦🇹</span><span class="label">Days 5–7 · Coming in v2.1</span><h2>Vienna</h2>
@@ -128,7 +155,7 @@ main{max-width:1060px;margin:0 auto;padding:16px 14px 54px}
 
 <section class="page" id="prague">
 <header class="hero inner">
-  <div class="kicker">🇨🇿 Prague · v2.0 complete</div>
+  <div class="kicker">🇨🇿 Prague · v2.1 complete</div>
   <h1>Prague</h1>
   <p class="subtitle">Four nights based at the Prague Marriott, planned as a practical, walkable introduction to the city.</p>
 </header>
@@ -271,6 +298,19 @@ main{max-width:1060px;margin:0 auto;padding:16px 14px 54px}
     <div><b>Must see</b><span>Powder Tower</span></div>
     <div><b>Print</b><span>Ready</span></div>
   </section>
+  <section class="card">
+    <span class="pill">Today’s Essentials</span>
+    <h2>Open this first</h2>
+    <div class="essentials">
+      <div class="essential-item"><b>Breakfast</b><span>Café Imperial</span></div>
+      <div class="essential-item"><b>First stop</b><span>Powder Tower</span></div>
+      <div class="essential-item"><b>Dinner</b><span>Mlýnec</span></div>
+      <div class="essential-item"><b>Walking</b><span>4–5 km</span></div>
+      <div class="essential-item"><b>Best photo</b><span>Old Town Square / Charles Bridge</span></div>
+      <div class="essential-item"><b>TripIt</b><span>Use for bookings</span></div>
+    </div>
+  </section>
+
   <section class="card">
     <span class="pill">Route at a glance</span>
     <p>Arrive, settle at the Prague Marriott, then ease into the historic centre with a relaxed walk through Powder Tower, Municipal House, Old Town Square and an optional evening at Charles Bridge.</p>
@@ -436,6 +476,19 @@ main{max-width:1060px;margin:0 auto;padding:16px 14px 54px}
     <div><b>Print</b><span>Ready</span></div>
   </section>
   <section class="card">
+    <span class="pill">Today’s Essentials</span>
+    <h2>Open this first</h2>
+    <div class="essentials">
+      <div class="essential-item"><b>Breakfast</b><span>Café Savoy</span></div>
+      <div class="essential-item"><b>First stop</b><span>Charles Bridge</span></div>
+      <div class="essential-item"><b>Dinner</b><span>La Degustation or simpler Old Town dinner</span></div>
+      <div class="essential-item"><b>Walking</b><span>6–7 km</span></div>
+      <div class="essential-item"><b>Best photo</b><span>Charles Bridge before crowds</span></div>
+      <div class="essential-item"><b>TripIt</b><span>Use for bookings</span></div>
+    </div>
+  </section>
+
+  <section class="card">
     <span class="pill">Route at a glance</span>
     <p>Start early near the river, then move through Charles Bridge, Clementinum, Old Town Square and Josefov without unnecessary backtracking.</p>
     <ul class="route"><li>Breakfast / Coffee — Café Savoy</li><li>Sightseeing — Charles Bridge</li><li>Viewpoint optional — Old Town Bridge Tower</li><li>Sightseeing — Clementinum</li><li>Sightseeing — Old Town Square</li><li>Sightseeing — Church of Our Lady before Týn</li><li>Lunch — Mincovna</li><li>Sightseeing — Jewish Quarter</li><li>Sightseeing — Old Jewish Cemetery</li><li>Coffee — EMA Espresso Bar</li><li>Dinner — La Degustation Bohême Bourgeoise</li></ul>
@@ -599,6 +652,19 @@ main{max-width:1060px;margin:0 auto;padding:16px 14px 54px}
     <div><b>Must see</b><span>Prague Castle</span></div>
     <div><b>Print</b><span>Ready</span></div>
   </section>
+  <section class="card">
+    <span class="pill">Today’s Essentials</span>
+    <h2>Open this first</h2>
+    <div class="essentials">
+      <div class="essential-item"><b>Breakfast</b><span>Můj šálek kávy</span></div>
+      <div class="essential-item"><b>First stop</b><span>Prague Castle</span></div>
+      <div class="essential-item"><b>Dinner</b><span>U Modré kachničky</span></div>
+      <div class="essential-item"><b>Walking</b><span>7–8 km</span></div>
+      <div class="essential-item"><b>Best photo</b><span>Castle terrace view</span></div>
+      <div class="essential-item"><b>TripIt</b><span>Use for bookings</span></div>
+    </div>
+  </section>
+
   <section class="card">
     <span class="pill">Route at a glance</span>
     <p>Begin at Prague Castle while the day is still fresh, then descend through Lesser Town, St Nicholas Church and Wallenstein Garden.</p>
@@ -764,6 +830,19 @@ main{max-width:1060px;margin:0 auto;padding:16px 14px 54px}
     <div><b>Print</b><span>Ready</span></div>
   </section>
   <section class="card">
+    <span class="pill">Today’s Essentials</span>
+    <h2>Open this first</h2>
+    <div class="essentials">
+      <div class="essential-item"><b>Breakfast</b><span>Eska</span></div>
+      <div class="essential-item"><b>First stop</b><span>Dancing House / Vltava riverside</span></div>
+      <div class="essential-item"><b>Dinner</b><span>Field Restaurant</span></div>
+      <div class="essential-item"><b>Walking</b><span>5–7 km</span></div>
+      <div class="essential-item"><b>Best photo</b><span>Petrín / riverside views</span></div>
+      <div class="essential-item"><b>TripIt</b><span>Use for bookings</span></div>
+    </div>
+  </section>
+
+  <section class="card">
     <span class="pill">Route at a glance</span>
     <p>Keep the final Prague day flexible: riverside walk, Petrín Hill if the weather is good, and a memorable final dinner.</p>
     <ul class="route"><li>Breakfast / Coffee — Eska</li><li>Sightseeing — Dancing House</li><li>Walk — Vltava River Walk</li><li>Sightseeing — Petrín Funicular</li><li>Sightseeing — Petrín Hill</li><li>Lunch — Café Savoy</li><li>Optional — Strahov Monastery</li><li>Coffee — Café Louvre</li><li>Dinner — Field Restaurant</li></ul>
@@ -908,6 +987,19 @@ main{max-width:1060px;margin:0 auto;padding:16px 14px 54px}
     <div><b>Print</b><span>Ready</span></div>
   </section>
   <section class="card">
+    <span class="pill">Today’s Essentials</span>
+    <h2>Open this first</h2>
+    <div class="essentials">
+      <div class="essential-item"><b>Breakfast</b><span>Café Imperial</span></div>
+      <div class="essential-item"><b>First stop</b><span>Praha hl.n.</span></div>
+      <div class="essential-item"><b>Dinner</b><span>Plachutta Wollzeile</span></div>
+      <div class="essential-item"><b>Walking</b><span>1–3 km</span></div>
+      <div class="essential-item"><b>Best photo</b><span>Vienna State Opera evening area</span></div>
+      <div class="essential-item"><b>TripIt</b><span>Use for bookings</span></div>
+    </div>
+  </section>
+
+  <section class="card">
     <span class="pill">Route at a glance</span>
     <p>Breakfast near the hotel, check out, then train from Praha hl.n. to Wien Hbf before settling into Hotel Imperial.</p>
     <ul class="route"><li>Breakfast — Café Imperial</li><li>Hotel — Prague Marriott Hotel</li><li>Station — Praha hlavní nádraží</li><li>Train — Praha hl.n. → Wien Hbf</li><li>Arrival — Wien Hauptbahnhof</li><li>Hotel — Hotel Imperial Vienna</li><li>Dinner — Plachutta Wollzeile</li></ul>
@@ -1028,7 +1120,7 @@ main{max-width:1060px;margin:0 auto;padding:16px 14px 54px}
 </main>
 </section>
 
-<div class="footer">Europe 2026 · Geoffrey & Caroline Willis · Version 2.0 · Prague production release</div>
+<div class="footer">Europe 2026 · Geoffrey & Caroline Willis · Version 2.1 · Today’s Essentials added</div>
 
 <script>
 function showPage(id){
